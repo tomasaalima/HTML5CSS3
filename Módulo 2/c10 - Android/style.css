@@ -32,6 +32,16 @@
     text-decoration: none;
 }
 
+.externo::after {
+    content: '\1F517';
+}
+
+
+.externo:hover {
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
 
 .cabecalho {
     background: linear-gradient(180deg, #2fa866, #1a5c37, #063d1e);
@@ -39,13 +49,13 @@
 }
 
 
-.cabecalho h1 {
+.cabecalho > h1 {
     font-family: var(--fonte-destaque);
     font-size: 2.8em;
 }
 
 
-.cabecalho h1, p {
+.cabecalho > h1, p {
     text-align: center;
     padding: 10px 0px 10px 0px;
 }
@@ -56,7 +66,7 @@
 }
 
 
-.menu a {
+.menu > a {
     text-decoration-color: none;
     color: white;
     font-weight: 700;
@@ -71,7 +81,7 @@ body {
 }
 
 
-.conteudo article {
+.conteudo > article {
     background-color: white;
     padding: 20px;
     width: 60%;
@@ -83,52 +93,56 @@ body {
 }
 
 
-article p, h1, h2 {
+article > p, h1, h2 {
     text-align: justify;
 }
 
 
-article h1, h2 {
+article > h1, h2 {
     font-family: var(--fonte-android);
     color: var(--cor5);
 }
 
 
-article h2 {
-    background-color: #44b87848;
+article > h2 {
+    background-image: linear-gradient(45deg, #0d613193, #c5ebd600);
     font-size: 1.3em;
 }
 
 
-article p {
+p {
     text-indent: 20px;
     font-family: var(--fonte-padrao);
     font-weight: normal;
     font-size: 1.1em;
+    line-height: 2em;
 }
 
 
 .fundo {
-    padding: 15px 0px 15px 0px;
+    margin: 0px -20px 30px -20px;
     background-color: #1A5C38;
+    padding: 20px;
+    position: relative;
+}
+
+
+article > .video {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+.imagem > img{
+    display: block;
     width: 100%;
 }
 
 
-article .video {
-    display: block;
-    margin: auto;
-    width: 90%; 
-}
-
-
-.imagem img{
-    display: block;
-    width: 100%;
-}
-
-
-.bugdroid img{
+.bugdroid > img{
     display: block;
     min-width: 300px;
     max-width: 400px;
@@ -147,7 +161,7 @@ article .video {
 }
 
 
-.caixa h4 {
+.caixa > h4 {
     padding: 10px;
     background-color: var(--cor3);
     border-radius: 20px 20px 0px 0px;
@@ -155,14 +169,14 @@ article .video {
 }
 
 
-.caixa p {
+.caixa > p {
     text-indent: 20px;
     text-align: justify;
     padding: 5px 15px 5px 15px;
 }
 
 
-.caixa ul {
+.caixa > ul {
     columns: 2;
     padding-left: 20px;
     list-style-type: none;
@@ -178,12 +192,15 @@ article .video {
 }
 
 
-.rodape p {
+.rodape > p {
     padding: 0;
     color: white;
 }
 
+.rodape > p > a {
+    color: white;
+}
 
-.menu a:hover {
+.menu > a:hover {
     background-color: var(--cor1);
 }
